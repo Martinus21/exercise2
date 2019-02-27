@@ -2,4 +2,4 @@
 
 Menggunakan : »	HTML »	CSS »	JS
 
-Link review : https://martinus21.github.io/exercise1/
+Link review : https://martinus21.github.io/exercise2/
