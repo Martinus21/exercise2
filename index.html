@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Kalkulator 1</title>
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/animation-style.css">
+
+	</head>
+	<body>
+		
+		<div class="container">
+			<table>
+				<tr>
+					<td colspan="5">
+						<input type="text" disabled id="hasil" value="0">
+					</td>
+				</tr>
+				<tr>
+					<td><button class="btn" onclick="btn('1')">1</button></td>
+					<td><button class="btn" onclick="btn('2')">2</button></td>
+					<td><button class="btn" onclick="btn('3')">3</button></td>
+					<td><button class="btn-clr" onclick="clr()">C</button></td>
+				</tr>
+				<tr>
+					<td><button class="btn" onclick="btn('4')">4</button></td>
+					<td><button class="btn" onclick="btn('5')">5</button></td>
+					<td><button class="btn" onclick="btn('6')">6</button></td>
+					<td><button class="btn" onclick="koma()">.</button></td>
+				</tr>
+				<tr>
+					<td><button class="btn" onclick="btn('7')">7</button></td>
+					<td><button class="btn" onclick="btn('8')">8</button></td>
+					<td><button class="btn" onclick="btn('9')">9</button></td>
+					<td><button class="btn" onclick="btn('0')">0</button></td>
+				</tr>
+				<tr>
+					<td><button class="btn-opr" onclick="btn_opr(1)">x</button></td>
+					<td><button class="btn-opr" onclick="btn_opr(2)">/</button></td>
+					<td><button class="btn-opr" onclick="btn_opr(3)">-</button></td>
+					<td><button class="btn-opr" onclick="btn_opr(4)">+</button></td>
+				</tr>
+
+				<tr>
+					<td colspan="5"><button class="btn-hsl" style="width: 100%" onclick="hitung()">=</button></td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="./js/kalkulator.js"></script>
+
+	</body>
+</html>

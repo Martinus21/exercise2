@@ -1,0 +1,11 @@
+@keyframes bg-btn {
+    0%      {background-color: #bdc3c7}
+    50%     {background-color: #7f8c8d}
+    100%    {background-color: #bdc3c7}
+}
+@keyframes rgb-tbl {
+    0%      {box-shadow: 0px 0px 30px #02a8c5}
+    33.5%   {box-shadow: 0px 0px 30px red}
+    66.5%   {box-shadow: 0px 0px 30px green}
+    100%    {box-shadow: 0px 0px 30px #02a8c5}
+}
