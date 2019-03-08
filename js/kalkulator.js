@@ -1,73 +1,64 @@
 var angka1;
 var angka2;
-var hitung;
-var operator;
+var hasil;
+var opr;
 var operator_seleksi = false;
-
-/* FUNGSI UNTUK MENGAMBIL DATA ANGKA */
 function btn(angka) {
-	var tampilkan = document.getElementById("hasil").value;
-	if (tampilkan == "0") {
-		tampilkan = angka; 
+	var display = document.getElementById("output").value;
+	if (display == "0") {
+		display = angka; 
 	} else {
-		tampilkan += angka;
+		display += angka;
 	}
-	document.getElementById("hasil").value = tampilkan;
-}
-
-
-/* FUNGSI UNTUK MENGAMBIL DATA KOMA */
-function koma() {
-	var tampilkan = document.getElementById("hasil").value;
-	if (tampilkan.includes(".") == false) {
-		tampilkan += ".";
-	}
-	document.getElementById("hasil").value = tampilkan;	
+	document.getElementById("output").value = display;
 }
  
-
-
-
-/* FUNGSI UNTUK SELEKSI BTN OPERATOR */
+function clr() {
+	document.getElementById("output").value = "0";
+	angka1 = 0;
+	angka2 = 0;
+	operator_seleksi = false;
+}
+ 
+function koma() {
+	var display = document.getElementById("output").value;
+	if (display.includes(".") == false) {
+		display += ".";
+	}
+	document.getElementById("output").value = display;	
+}
+ 
 function btn_opr(o) {
 	operator_seleksi = true;
-	angka1 = parseFloat(document.getElementById("hasil").value);
-	operator = o;
-	document.getElementById("hasil").value = "0";
+	angka1 = parseFloat(document.getElementById("output").value);
+	opr = o;
+	document.getElementById("output").value = "0";
 }
  
 function hitung() {
 	if (operator_seleksi == true) {
-		angka2 = parseFloat(document.getElementById("hasil").value);
-		switch(operator){
+		angka2 = parseFloat(document.getElementById("output").value);
+		switch(opr){
 			case 1 :
-				hitung = angka1 * angka2;
-				document.getElementById("hasil").value = hitung;			
+				hasil = angka1 * angka2;
+				document.getElementById("output").value = hasil;			
 				break;
 			case 2 :
-				hitung = angka1 / angka2;
-				document.getElementById("hasil").value = hitung;
+				hasil = angka1 / angka2;
+				document.getElementById("output").value = hasil;
 				break;
 			case 3 :
-				hitung = angka1 - angka2;
-				document.getElementById("hasil").value = hitung;
+				hasil = angka1 - angka2;
+				document.getElementById("output").value = hasil;
 				break;
 			case 4 :
-				hitung = angka1 + angka2;
-				document.getElementById("hasil").value = hitung;
+				hasil = angka1 + angka2;
+				document.getElementById("output").value = hasil;
 				break;
 		}
 		operator_seleksi = false
-		hitung = 0;
+		hasil = 0;
 		angka1 = 0;
 		angka2 = 0;
 	}
-}
-
-/* FUNGSI UNTUK MENGULANG */
-function clr() {
-	document.getElementById("hasil").value = "0";
-	angka1 = 0;
-	angka2 = 0;
-	operator_seleksi = false;
 }
