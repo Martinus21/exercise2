@@ -1,5 +1,5 @@
-var angka_1;
-var angka_2;
+var angka1;
+var angka2;
 var hitung;
 var operator;
 var operator_seleksi = false;
@@ -31,43 +31,43 @@ function koma() {
 /* FUNGSI UNTUK SELEKSI BTN OPERATOR */
 function btn_opr(o) {
 	operator_seleksi = true;
-	angka_1 = parseFloat(document.getElementById("hasil").value);
+	angka1 = parseFloat(document.getElementById("hasil").value);
 	operator = o;
 	document.getElementById("hasil").value = "0";
 }
  
 function hitung() {
 	if (operator_seleksi == true) {
-		angka_2 = parseFloat(document.getElementById("hasil").value);
+		angka2 = parseFloat(document.getElementById("hasil").value);
 		switch(operator){
 			case 1 :
-				hitung = angka_1 * angka_2;
+				hitung = angka1 * angka2;
 				document.getElementById("hasil").value = hitung;			
 				break;
 			case 2 :
-				hitung = angka_1 / angka_2;
+				hitung = angka1 / angka2;
 				document.getElementById("hasil").value = hitung;
 				break;
 			case 3 :
-				hitung = angka_1 - angka_2;
+				hitung = angka1 - angka2;
 				document.getElementById("hasil").value = hitung;
 				break;
 			case 4 :
-				hitung = angka_1 + angka_2;
+				hitung = angka1 + angka2;
 				document.getElementById("hasil").value = hitung;
 				break;
 		}
 		operator_seleksi = false
 		hitung = 0;
-		angka_1 = 0;
-		angka_2 = 0;
+		angka1 = 0;
+		angka2 = 0;
 	}
 }
 
 /* FUNGSI UNTUK MENGULANG */
 function clr() {
 	document.getElementById("hasil").value = "0";
-	angka_1 = 0;
-	angka_2 = 0;
+	angka1 = 0;
+	angka2 = 0;
 	operator_seleksi = false;
 }
